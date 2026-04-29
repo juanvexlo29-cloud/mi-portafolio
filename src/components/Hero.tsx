@@ -1,8 +1,9 @@
 // src/components/Hero.tsx
 import { motion, type Variants } from 'framer-motion';
+// Importamos el PDF desde la carpeta assets
+import miCV from '../assets/Mi_Hoja_De_Vida.pdf';
 
 const Hero = () => {
-  // Le decimos a TypeScript que esto es específicamente de tipo 'Variants'
   const titleVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -27,7 +28,7 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
       
-      {/* Fondo de cuadrícula futurista (Movido a styles para evitar advertencias de Tailwind) */}
+      {/* Fondo de cuadrícula futurista */}
       <div 
         className="absolute inset-0"
         style={{
@@ -73,7 +74,6 @@ const Hero = () => {
           <motion.span variants={wordVariants} className="block">
             Software
           </motion.span>
-          {/* Actualizado a bg-linear-to-r según la sugerencia de Tailwind v4 */}
           <motion.span variants={wordVariants} className="block text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 mt-2">
             Developer
           </motion.span>
@@ -106,9 +106,12 @@ const Hero = () => {
             </span>
           </a>
           
+          {/* Botón de CV actualizado */}
           <a 
-            href="/tu-cv.pdf" 
+            href={miCV} 
+            download="Hoja_de_Vida_Juan_Diego.pdf" 
             target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-4 text-zinc-300 font-mono text-sm uppercase tracking-widest border border-zinc-800 hover:bg-zinc-900 transition-all flex justify-center items-center"
           >
             Descargar_CV.exe
