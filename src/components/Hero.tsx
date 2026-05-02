@@ -64,7 +64,7 @@ const Hero = () => {
           <span className="text-xs font-mono text-cyan-400 tracking-wider uppercase">System Online // Disponible</span>
         </motion.div>
 
-        {/* Título Principal Humano y Animado */}
+        {/* Título Principal */}
         <motion.h1 
           variants={titleVariants}
           initial="hidden"
@@ -79,14 +79,14 @@ const Hero = () => {
           </motion.span>
         </motion.h1>
 
-        {/* Descripción con tono conversacional */}
+        {/* Descripción 100% Humana y Directa */}
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
           className="text-base sm:text-lg md:text-xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
         >
-          Me apasiona transformar lógica compleja en interfaces intuitivas y escalables. Más que escribir código, construyo soluciones web robustas y arquitecturas limpias utilizando <strong className="text-white font-mono">React</strong> y <strong className="text-white font-mono">TypeScript</strong>.
+          Hago aplicaciones web que resuelven problemas reales. Más que sentarme a escribir líneas de código en automático, me gusta pensar en cómo hacer que todo funcione rápido y sin enredos para el usuario. Mi día a día es armar interfaces limpias y sólidas usando <strong className="text-white font-mono">React</strong> y <strong className="text-white font-mono">TypeScript</strong>.
         </motion.p>
 
         {/* Botones */}
@@ -101,12 +101,11 @@ const Hero = () => {
             className="group w-full sm:w-auto relative px-8 py-4 bg-white text-black font-bold rounded-none overflow-hidden transition-all hover:scale-105 flex justify-center items-center"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Explorar Proyectos
+              Ver lo que he construido
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
             </span>
           </a>
           
-          {/* Botón de CV apuntando al import del PDF */}
           <a 
             href={miCV} 
             download="Juan_Diego_CV.pdf" 
