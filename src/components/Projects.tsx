@@ -14,8 +14,8 @@ const Projects = () => {
         "Implementación de pasarela de pagos Wompi (Becado PRO).",
         "Estandarización de lógica de XP y niveles en toda la App."
       ],
-      link: "#",
-      github: "#",
+      link: "https://github.com/juanvexlo29-cloud",
+      github: "https://github.com/juanvexlo29-cloud",
       size: "md:col-span-2", 
       color: "from-cyan-500/20 to-blue-500/20"
     },
@@ -28,8 +28,8 @@ const Projects = () => {
         "Vistas de perfil dinámicas para prestadores de servicios.",
         "Arquitectura de componentes altamente reutilizables."
       ],
-      link: "#",
-      github: "#",
+      link: "https://github.com/juanvexlo29-cloud",
+      github: "https://github.com/juanvexlo29-cloud",
       size: "md:col-span-1", 
       color: "from-purple-500/20 to-fuchsia-500/20"
     }

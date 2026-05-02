@@ -1,7 +1,7 @@
 // src/components/Hero.tsx
 import { motion, type Variants } from 'framer-motion';
-// Importamos el PDF desde la carpeta assets
-import miCV from '../assets/Mi_Hoja_De_Vida.pdf';
+// Importamos el PDF con el nombre exacto que tienes en tu carpeta assets
+import miCV from '../assets/hoja de vida.pdf';
 
 const Hero = () => {
   const titleVariants: Variants = {
@@ -64,29 +64,29 @@ const Hero = () => {
           <span className="text-xs font-mono text-cyan-400 tracking-wider uppercase">System Online // Disponible</span>
         </motion.div>
 
-        {/* Título Principal Animado Palabra por Palabra */}
+        {/* Título Principal Humano y Animado */}
         <motion.h1 
           variants={titleVariants}
           initial="hidden"
           animate="visible"
-          className="text-5xl sm:text-6xl md:text-8xl font-black text-white tracking-tighter mb-6 leading-tight flex flex-col items-center"
+          className="text-5xl sm:text-6xl md:text-8xl font-black text-white tracking-tighter mb-6 leading-tight flex flex-col items-center text-center"
         >
-          <motion.span variants={wordVariants} className="block">
-            Software
+          <motion.span variants={wordVariants} className="block text-3xl sm:text-4xl md:text-5xl text-zinc-300 font-medium tracking-normal mb-2">
+            Hola, soy Juan Diego
           </motion.span>
           <motion.span variants={wordVariants} className="block text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 mt-2">
-            Developer
+            Frontend Developer
           </motion.span>
         </motion.h1>
 
-        {/* Descripción */}
+        {/* Descripción con tono conversacional */}
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
           className="text-base sm:text-lg md:text-xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
         >
-          Diseño arquitecturas limpias y construyo aplicaciones web robustas. Transformo lógica compleja en interfaces de usuario intuitivas y escalables usando <strong className="text-white font-mono">React</strong> y <strong className="text-white font-mono">TypeScript</strong>.
+          Me apasiona transformar lógica compleja en interfaces intuitivas y escalables. Más que escribir código, construyo soluciones web robustas y arquitecturas limpias utilizando <strong className="text-white font-mono">React</strong> y <strong className="text-white font-mono">TypeScript</strong>.
         </motion.p>
 
         {/* Botones */}
@@ -106,10 +106,10 @@ const Hero = () => {
             </span>
           </a>
           
-          {/* Botón de CV actualizado */}
+          {/* Botón de CV apuntando al import del PDF */}
           <a 
             href={miCV} 
-            download="Hoja_de_Vida_Juan_Diego.pdf" 
+            download="Juan_Diego_CV.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-4 text-zinc-300 font-mono text-sm uppercase tracking-widest border border-zinc-800 hover:bg-zinc-900 transition-all flex justify-center items-center"

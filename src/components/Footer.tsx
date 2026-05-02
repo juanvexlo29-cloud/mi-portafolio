@@ -20,7 +20,9 @@ const Footer = () => {
           </p>
           
           <a 
-            href="mailto:tu-correo@ejemplo.com" 
+            href="juanvexlo29@gmail.com" 
+            target="_blank" 
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-none hover:scale-105 transition-transform"
           >
             Enviar Mensaje
@@ -38,10 +40,10 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-6">
-            <a href="https://github.com/tu-usuario" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
+            <a href="https://github.com/juanvexlo29-cloud" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
               GitHub
             </a>
-            <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/juan-vega-aa275a3a8" target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
               LinkedIn
             </a>
           </div>
