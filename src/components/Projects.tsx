@@ -14,8 +14,8 @@ const Projects = () => {
         "Implementación de pasarela de pagos Wompi (Becado PRO).",
         "Estandarización de lógica de XP y niveles en toda la App."
       ],
-      link: "https://github.com/juanvexlo29-cloud",
-      github: "https://github.com/juanvexlo29-cloud",
+      link: "https://icfes-pro-c896f.web.app/",
+      github: "https://github.com/juanvexlo29-cloud/icfes-pro",
       size: "md:col-span-2", 
       color: "from-cyan-500/20 to-blue-500/20"
     },
