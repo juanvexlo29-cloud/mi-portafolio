@@ -1,5 +1,4 @@
 // src/components/Projects.tsx
-// Se importó Variants correctamente como tipo
 import { motion, type Variants } from 'framer-motion';
 
 const Projects = () => {
@@ -14,9 +13,9 @@ const Projects = () => {
         "Implementación de pasarela de pagos Wompi (Becado PRO).",
         "Estandarización de lógica de XP y niveles en toda la App."
       ],
-      link: "https://icfes-pro-c896f.web.app/",
-      github: "https://github.com/juanvexlo29-cloud/icfes-pro",
-      size: "md:col-span-2", 
+      link: "https://www.icfespro.com", // Cambia esto si tienes un link diferente
+      github: "https://github.com/juanvexlo29-cloud/icfes-pro-repo", // Cambia esto al real si es público
+      size: "md:col-span-2", // Proyecto grande
       color: "from-cyan-500/20 to-blue-500/20"
     },
     {
@@ -28,10 +27,38 @@ const Projects = () => {
         "Vistas de perfil dinámicas para prestadores de servicios.",
         "Arquitectura de componentes altamente reutilizables."
       ],
-      link: "https://github.com/juanvexlo29-cloud",
-      github: "https://github.com/juanvexlo29-cloud",
-      size: "md:col-span-1", 
+      link: "https://www.walkerhome.app", // Cambia esto si tienes un link diferente
+      github: "https://github.com/juanvexlo29-cloud/walkerhome-repo", // Cambia esto al real
+      size: "md:col-span-1", // Proyecto pequeño
       color: "from-purple-500/20 to-fuchsia-500/20"
+    },
+    {
+      title: "LexPremium",
+      category: "Corporate // Premium UI",
+      desc: "Presencia web de alto nivel para firma de abogados, enfocada en proyectar autoridad mediante diseño minimalista e interacciones fluidas.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      highlights: [
+        "Implementación de animaciones premium para mejorar la retención del usuario.",
+        "Estructura multipágina optimizada para áreas de práctica y blog legal."
+      ],
+      link: "https://juanvexlo29-cloud.github.io/lex-premium/",
+      github: "https://github.com/juanvexlo29-cloud/lex-premium",
+      size: "md:col-span-1", // Proyecto pequeño (invertimos el orden en esta fila)
+      color: "from-amber-500/20 to-yellow-600/20"
+    },
+    {
+      title: "NeonVape Shop",
+      category: "E-Commerce // Dark Mode",
+      desc: "Tienda virtual con estética moderna y diseño espectacular basado en altos contrastes, glassmorphism y modo oscuro nativo.",
+      tech: ["React", "TypeScript", "Tailwind v4"],
+      highlights: [
+        "Diseño visual de alto impacto utilizando paletas neón y desenfoques.",
+        "Catálogo de productos interactivo y responsivo."
+      ],
+      link: "https://juanvexlo29-cloud.github.io/neonvape-shop/",
+      github: "https://github.com/juanvexlo29-cloud/neonvape-shop",
+      size: "md:col-span-2", // Proyecto grande
+      color: "from-pink-500/20 to-rose-500/20"
     }
   ];
 
@@ -46,7 +73,6 @@ const Projects = () => {
 
   return (
     <section id="proyectos" className="relative py-24 bg-black overflow-hidden">
-      {/* Se cambiaron las medidas arbitrarias por las canónicas w-125 h-125 */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-blue-600/5 blur-[120px] rounded-full"></div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-24">
@@ -75,7 +101,6 @@ const Projects = () => {
               viewport={{ once: true, margin: "-50px" }}
               className={`group relative overflow-hidden bg-zinc-900/50 border border-zinc-800 p-8 flex flex-col justify-between hover:border-zinc-600 transition-all duration-500 ${project.size}`}
             >
-              {/* Se actualizó bg-gradient-to-br a bg-linear-to-br */}
               <div className={`absolute inset-0 bg-linear-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
               <div className="relative z-10">
@@ -84,10 +109,10 @@ const Projects = () => {
                     {project.category}
                   </span>
                   <div className="flex gap-4">
-                    <a href={project.github} className="text-zinc-500 hover:text-white transition-colors">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors cursor-pointer">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.192.694.805.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
-                    <a href={project.link} className="text-zinc-500 hover:text-white transition-colors">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-white transition-colors cursor-pointer">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
                   </div>
